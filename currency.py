@@ -12,7 +12,7 @@ def index():
 
     if response.status_code == 200:
         data = response.json()
-        tjs_value = data['data']['TJS']['value']
+        tjs_value = round(data['data']['TJS']['value'], 2)
 
     return render_template('index.html', tjs_value=tjs_value)
 
